@@ -3,8 +3,7 @@ import ReactDOM from 'react-dom';
 
 const Hello = (props) => {
   console.log(props);
-  const name = props.name;
-  const age = props.age;
+  const {name, age} = props;
 
   const bornYear = () => new Date().getFullYear()- age;
 
@@ -17,8 +16,8 @@ const Hello = (props) => {
 }
 
 const App = () => {
-  const name = 'Peter';
-  const age = 10;
+  const name = 'Arto Hellas';
+  const age = 35;
 
   return (
     <div>

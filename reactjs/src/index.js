@@ -13,22 +13,12 @@ const App = () => {
   });
 
   // Manejador de eventos para click izquierdo
-  const handleLeftClick = () => {
-    const newClicks = {
-      ...clicks,
-      left: clicks.left +1
-    }
-    setClicks(newClicks);
-  }
+  const handleLeftClick = () =>
+    setClicks({...clicks, left: clicks.left + 1})
 
   // Manejador de eventos para click derecho
-  const handleRightClick = () => {
-    const newClicks = {
-      ...clicks,
-      right: clicks.right + 1
-    }
-    setClicks(newClicks);
-  }
+  const handleRightClick = () => 
+    setClicks({...clicks, right: clicks.right + 1})
 
   // Retornamos lo que se verá en pantalla
   return (

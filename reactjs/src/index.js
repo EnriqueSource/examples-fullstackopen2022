@@ -15,8 +15,8 @@ const App = () => {
   // Manejador de eventos para click izquierdo
   const handleLeftClick = () => {
     const newClicks = {
-      left: clicks.left + 1,
-      right: clicks.right
+      ...clicks,
+      left: clicks.left +1
     }
     setClicks(newClicks);
   }
@@ -24,7 +24,7 @@ const App = () => {
   // Manejador de eventos para click derecho
   const handleRightClick = () => {
     const newClicks = {
-      left: clicks.left,
+      ...clicks,
       right: clicks.right + 1
     }
     setClicks(newClicks);

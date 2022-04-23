@@ -1,32 +1,29 @@
-import React, {useState} from 'react'; // Import useState
+import React, {useState} from 'react';
 import ReactDOM from 'react-dom';
 
 
 const App = () => {
-  // Creamos una constante que es un array con la
-  // variable "clicks" y la función "setClicks". Le asignamos
-  // la función "useState()", dentro de la cual creamos
-  // el objeto que contiene el recuento de clicks de los
-  // botones "left" y Right".
-  const [clicks, setClicks] = useState({
-    left: 0, right: 0
-  });
+  const [left, setLeft] = useState(0);
+  const [right, setRight] = useState(0);
+  const [allClicks, setAll] = useState([]);
 
-  // Manejador de eventos para click izquierdo
-  const handleLeftClick = () =>
-    setClicks({...clicks, left: clicks.left + 1})
+  const handleLeftClick = () => {
+    setAll(allClicks.concat('L'));
+    setLeft(left + 1);
+  } 
 
-  // Manejador de eventos para click derecho
-  const handleRightClick = () => 
-    setClicks({...clicks, right: clicks.right + 1})
+  const handleRightClick = () => {
+    setAll(allClicks.concat('R'));
+    setRight(right + 1);
+  }
 
-  // Retornamos lo que se verá en pantalla
-  return (
+  return(
     <div>
-      {clicks.left}
+      {left}
       <button onClick={handleLeftClick}>left</button>
       <button onClick={handleRightClick}>right</button>
-      {clicks.right}
+      {right}
+      <p>{allClicks.join('')}</p>
     </div>
   )
 } 

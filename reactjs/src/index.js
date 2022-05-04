@@ -5,10 +5,9 @@ const App = () => {
   const [value, setValue] = useState(10);
 
   const hello = (who) => {
-    const handler = () => {
+    return () => {
       console.log('hello world', who);
     }
-    return handler;
   }
 
   return (

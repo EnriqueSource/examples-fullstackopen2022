@@ -4,11 +4,10 @@ import ReactDOM from 'react-dom';
 const App = () => {
   const [value, setValue] = useState(10);
 
-  const hello = (who) => {
-    return () => {
+  const hello = (who) =>
+    () => {
       console.log('hello world', who);
     }
-  }
 
   return (
     <div>

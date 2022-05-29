@@ -37,7 +37,7 @@ const App = (props) => {
   );
 };
 
-const result = notes.map((note) => note.id);
+const result = notes.map((note) => note.content);
 console.log(result);
 
 ReactDOM.render(<App notes={notes} />, document.getElementById("root"));

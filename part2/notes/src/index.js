@@ -1,4 +1,3 @@
-// Issue version
 import React from "react";
 import ReactDOM from "react-dom";
 
@@ -37,5 +36,8 @@ const App = (props) => {
     </div>
   );
 };
+
+const result = notes.map((note) => note.id);
+console.log(result);
 
 ReactDOM.render(<App notes={notes} />, document.getElementById("root"));

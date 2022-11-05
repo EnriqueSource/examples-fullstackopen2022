@@ -46,7 +46,7 @@ const App = () => {
     : notes.filter((note) => note.important === true);
 
   const toogleImportanceOf = (id) => {
-    console.log('importance of ' + id + ' needs to be toogled');
+    console.log(`importance of ${id} needs to be toogled`);
   }
 
   return (

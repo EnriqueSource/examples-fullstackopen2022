@@ -12,7 +12,11 @@ const App = () => {
     noteService
       .getAll()
       .then(initialNotes => {
+<<<<<<< HEAD
         setNotes(initialNotes);
+=======
+        setNotes(initialNotes)
+>>>>>>> dev
       })    
   }, []);
 
